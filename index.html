@@ -7,6 +7,21 @@
 </head>
 	
 <body>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+     <script>
+     var eventposted = 0;
+     $(document).ready(function() {
+       $('input.button').click(function() {
+         window.setInterval(foo, 100);
+       });
+     });
+     function foo() {
+       if (($(".form-submission-text").is(':visible')) && (eventposted == 0)) {
+         window.location.href = "http://www.somewhere.com/somepage.html";
+       }
+     }
+     </script>
 	<!-- Used https://github.com/dwyl/html-form-send-email-via-google-script-without-server to create scripts -->
 	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec">
 		<input type="text" name="name">
