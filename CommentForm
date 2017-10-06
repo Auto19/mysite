@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equic="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Contact Form</title>
+</head>
+	
+<body>
+	<!-- Used https://github.com/dwyl/html-form-send-email-via-google-script-without-server to create scripts -->
+	<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec">
+		<input type="text" name="name">
+	</form>
+</body>
+
+
+</html>
