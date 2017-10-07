@@ -19,7 +19,11 @@
 
   		function showInfo(data, tabletop) {
     			alert('Successfully processed!')
-    			console.log(data['Comment']);
+    			console.log(data);
+			var names = items.map(function(data) {
+  				return data['Comment'];
+			});
+			console.log(names);
   		}
 
   		window.addEventListener('DOMContentLoaded', init)
