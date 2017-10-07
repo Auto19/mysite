@@ -16,7 +16,9 @@
     		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
 			onload="if(submitted) {window.location='whateveryourredirectis.html';}"></iframe>
       	<form action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec" method="post" target="hidden_iframe" 
-		onsubmit="submitted=true;">
+	      onsubmit="submitted=true;"> 
+		<input type="text" name="Comment">
+	</form>
 	
 	
 	<button type="submit" form="gform" value="Submit">Submit</button>
