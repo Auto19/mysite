@@ -10,7 +10,7 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 	<script type='text/javascript'>    
   		var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1XtYbT8exPI21tAtZWWDJwoNqC0-kbaIR00siPHt87Ow/edit?usp=sharing';
-		var theComments = ["first"];
+		var theComments = q;
 		
   		function init() {
     		Tabletop.init( { key: publicSpreadsheetUrl,
@@ -25,7 +25,7 @@
   				return data['Comment'];
 			});
 			
-			theComments.concat(names);
+			//theComments.concat(names);
 			
 			console.log(names);
   		}
