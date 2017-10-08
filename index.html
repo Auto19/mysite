@@ -36,8 +36,7 @@
 	<script type='text/javascript'>    
   		var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1XtYbT8exPI21tAtZWWDJwoNqC0-kbaIR00siPHt87Ow/edit?usp=sharing';
 		var theComments = [
-		 'first',
-		 'sec'
+		 'first'
 		]; 
 		
   		function init() {
@@ -49,14 +48,17 @@
   		function showInfo(data, tabletop) {
     			//alert('Successfully processed!')
     			console.log(data);
-			var names = data.map(function(data) {
+			var Comments = data.map(function(data) {
   				return data['Comment'];
+			});
+			var TimeStamp = data.map(function(data) {
+  				return data['TimeStamp'];
 			});
 			
 			console.log(names);
 			
-			for(var i = 0; i < names.length; i++) {
-				theComments.push(names[i]);
+			for(var i = 0; i < Comments.length; i++) {
+				theComments.push(Comments[i]);
 			}
 			
 			for(var i = 0; i < theComments.length; i++) {
