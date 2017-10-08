@@ -10,7 +10,8 @@
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
 	<script type='text/javascript'>    
   		var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1XtYbT8exPI21tAtZWWDJwoNqC0-kbaIR00siPHt87Ow/edit?usp=sharing';
-
+		var theComments = ["first, "sec"];
+		
   		function init() {
     		Tabletop.init( { key: publicSpreadsheetUrl,
                      	callback: showInfo,
@@ -23,14 +24,24 @@
 			var names = data.map(function(data) {
   				return data['Comment'];
 			});
+		
+			for(int i = 0; i < names.length; i++) {
+				theComments.push(names[i]); 	
+			}
+		
+		
 			console.log(names);
   		}
+		
+		
 
   		window.addEventListener('DOMContentLoaded', init)
-</script>
-	<iframe src="https://auto19.github.io/mysite/CommentForm.html" sandbox="">
+	</script>
+	
+	
+	<!-- <iframe src="https://auto19.github.io/mysite/CommentForm.html" sandbox="">
 		<p>Ja need Iframes bud, your browser turned it off.</p>
-	</iframe>
+	</iframe> -->
 </body>
 
 
