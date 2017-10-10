@@ -71,6 +71,15 @@
                      	callback: showInfo,
                      	simpleSheet: true } )
   		}
+		
+		function strip_html_tags(str) {
+   			if ((str===null) || (str===''))
+       				return false;
+  			else {
+   				str = str.toString();
+			}
+ 			return str.replace(/<[^>]*>/g, '');
+		}
 
   		function showInfo(data, tabletop) {
     			//alert('Successfully processed!')
@@ -93,7 +102,7 @@
 					var table = document.getElementById("mahTable");
     					var row = table.insertRow(0);
     					var cell1 = row.insertCell(0);
-    					cell1.innerHTML = theComments[i];
+    					cell1.innerHTML = strip_html_tags(theComments[i]);
 				}
 			}
 			
