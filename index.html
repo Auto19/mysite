@@ -62,18 +62,13 @@
 </head>
 	
 <body>
-	
-	<script> 
-		function unhideDiv() {
-  			document.getElementById('gform').style = "display: block;"; 
-		} 
-	</script>
 	<header>
    		<h2> </h2>
 		<button  type='button' onClick='unhideDiv()' style="position: absolute; right: 0;">Comment</button>
 	</header>
-	<comment>
-		<script type="text/javascript">var submitted=false;</script>
+	
+	<!-- <button type="submit" form="gform" value="Submit">Submit</button> -->
+	<script type="text/javascript">var submitted=false;</script>
     		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
 			onload="if(submitted) {window.location='https://auto19.github.io/mysite/';}"></iframe>
       			<form style="display:none;" id="gform" action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec" method="post" target="hidden_iframe" 
@@ -81,9 +76,7 @@
 				<textarea type="text" name="Comment">
 			</form>
 				<button type="submit" form="gform" value="Submit">Submit</button>
-	</comment>
-	
-	<!-- <button type="submit" form="gform" value="Submit">Submit</button> -->
+				
 	
 	<table id="mahTable">
   		<tr>
@@ -114,6 +107,9 @@
  			return str.replace(/<[^>]*>/g, '');
 		}
 
+		function unhideDiv() {
+  			document.getElementById('gform').style = "display: block;"; 
+		} 
   		function showInfo(data, tabletop) {
     			//alert('Successfully processed!')
     			console.log(data);
