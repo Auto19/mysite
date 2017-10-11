@@ -57,7 +57,11 @@
    			text-align: center;
 		}
 	</style>
-	
+	<script> 
+		function unhideDiv() {
+  			document.getElementById('gform').style = "display: block;"; 
+		} 
+	</script>
 	<header>
    		<h2> </h2>
 		<button  type='button' onClick='unhideDiv()' style="position: absolute; right: 0;">Comment</button>
@@ -70,11 +74,6 @@
 	      			onsubmit="submitted=true;"> 
 				<textarea type="text" name="Comment">
 			</form>
-				<script> 
-				function unhideDiv() {
-  					document.getElementById('gform').style = "display: block;"; 
-				} 
-				</script>
 				<button type="submit" form="gform" value="Submit">Submit</button>
 	</comment>
 	
