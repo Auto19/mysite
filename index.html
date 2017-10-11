@@ -82,7 +82,7 @@
 		var theComments = [
 		 'REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE'
 		]; 
-		var bool = False;
+		var bool = false;
 		
   		function init() {
     		Tabletop.init( { key: publicSpreadsheetUrl,
@@ -100,12 +100,12 @@
 		}
 		
 		function unhideDiv() {
-			if(bool == False) {
+			if(bool == false) {
   				document.getElementById('gform').style = "display: block;"; 
-				bool = True;
+				bool = true;
 			} else {
 				document.getElementById('gform').style = "display: none;"; 
-				bool = False;
+				bool = false;
 			}
 		}  
 		
