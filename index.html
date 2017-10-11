@@ -47,15 +47,16 @@
 		}
 	</style>
 	
-	<header>
+	<!-- <header>
    		<h2> </h2>
-		<!-- <button class="clicky" type="submit" form="gform" value="Submit">Submit</button> -->
-	</header>
+		 <button class="clicky" type="submit" form="gform" value="Submit">Submit</button>
+	</header> -->
 	
 </head>
 	
 <body>	
-	<button type="submit" form="gform" value="Submit">Submit</button>
+	<input type='button' onClick='unhideDiv()' />
+	
 	<script type="text/javascript">var submitted=false;</script>
     		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
 			onload="if(submitted) {window.location='https://auto19.github.io/mysite/';}"></iframe>
@@ -96,6 +97,11 @@
 			}
  			return str.replace(/<[^>]*>/g, '');
 		}
+		
+		function unhideDiv() {
+  			document.getElementById('gform').style = "display: block;"; 
+		}  
+		
   		function showInfo(data, tabletop) {
     			//alert('Successfully processed!')
     			console.log(data);
