@@ -45,20 +45,37 @@
     			clear: left;
    			text-align: center;
 		}
+		comment {
+			position: fixed;
+			left: 0;
+    			top: 0;
+    			width: 100%;
+    			padding: 1em;
+    			color: white;
+    			background-color: #42f4cb;
+    			clear: left;
+   			text-align: center;
+		}
 	</style>
 	
 	<header>
    		<h2> </h2>
-		<button type="submit" form="gform" value="Submit"  style="position: absolute; right: 0;">Submit</button>
+		<button  type='button' onClick='unhideDiv()' style="position: absolute; right: 0;">Comment</button>
 	</header>
 	<comment>
 		<script type="text/javascript">var submitted=false;</script>
     		<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"     
 			onload="if(submitted) {window.location='https://auto19.github.io/mysite/';}"></iframe>
-      			<form id="gform" action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec" method="post" target="hidden_iframe" 
+      			<form style="display:none;" id="gform" action="https://script.google.com/macros/s/AKfycbyXCm7QLbS0jnCIlZt8kADwtXTf0ZYKpI7Bb5dr1tJoxscMj-0/exec" method="post" target="hidden_iframe" 
 	      			onsubmit="submitted=true;"> 
-			<input type="text" name="Comment">
+				<textarea type="text" name="Comment">
 			</form>
+				<script> 
+				function unhideDiv() {
+  					document.getElementById('gform').style = "display: block;"; 
+				} 
+				</script>
+				<button type="submit" form="gform" value="Submit">Submit</button>
 	</comment>
 	
 </head>
@@ -67,7 +84,7 @@
 	
 	
 	
-	<button type="submit" form="gform" value="Submit">Submit</button>
+	<!-- <button type="submit" form="gform" value="Submit">Submit</button> -->
 	
 	<table id="mahTable">
   		<tr>
